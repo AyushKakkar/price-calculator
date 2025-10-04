@@ -1008,6 +1008,11 @@ select.form-control {
   border-color: var(--color-success);
 }
 
+.summary-card.card-9 {
+  background: rgba(168, 85, 247, 0.08); /* Light purple variant */
+  border-color: rgba(168, 85, 247, 1);
+}
+
 .card-label {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
@@ -1087,4 +1092,51 @@ footer p {
 
 .quantity-updated {
   animation: pulse 0.3s ease-in-out;
+}
+
+.floating-summary-btn {
+  position: fixed;
+  bottom: var(--space-20);
+  right: var(--space-20);
+  z-index: 1000;
+}
+
+.floating-btn {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  color: var(--color-btn-primary-text);
+  padding: var(--space-12) var(--space-20);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  cursor: pointer;
+  min-width: 120px;
+  white-space: nowrap;
+}
+
+.floating-btn:hover {
+  background: linear-gradient(135deg, var(--color-primary-hover) 0%, var(--color-primary-active) 100%);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.floating-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+} 
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .floating-summary-btn {
+    bottom: var(--space-16);
+    right: var(--space-16);
+  }
+  
+  .floating-btn {
+    padding: var(--space-10) var(--space-16);
+    font-size: var(--font-size-sm);
+    min-width: 100px;
+  }
 }

@@ -36,9 +36,9 @@ const products = [
     { id: 34, name: "CELL-U-LOSS", volPoint: 15.75, mrp: 1705, d15: 1481, d25: 1331, d35: 1182, d42: 1078, d50: 959 },
     { id: 35, name: "HERBAL CONTROL", volPoint: 32.95, mrp: 3433, d15: 2982, d25: 2681, d35: 2381, d42: 2171, d50: 1930 },
     { id: 36, name: "OCULAR DEFENSE", volPoint: 19.25, mrp: 1927, d15: 1674, d25: 1505, d35: 1336, d42: 1218, d50: 1083 },
-    { id: 37, name: "SLEEP ENHANCE", volPoint: 16.3, mrp: 1697, d15: 1474, d25: 1326, d35: 1177, d42: 1073, d50: 954 }
+    { id: 37, name: "SLEEP ENHANCE", volPoint: 16.3, mrp: 1697, d15: 1474, d25: 1326, d35: 1177, d42: 1073, d50: 954 },
+     { id: 38, name: "LIFTOFF", volPoint: 38.05, mrp: 4119, d15: 3578, d25: 3219, d35: 2857, d42: 2604, d50: 2306 }
 ];
-
 // Initialize quantities object
 const quantities = {};
 products.forEach(product => {
@@ -134,6 +134,7 @@ function animateQuantityChange(id) {
 function calculateTotals() {
     let totalVP = 0;
     let totalMRP = 0;
+    var total15 = 0; 
     let total25 = 0;
     let total35 = 0;
     let total42 = 0;
@@ -146,6 +147,7 @@ function calculateTotals() {
         totalQty += qty;
         totalVP += product.volPoint * qty;
         totalMRP += product.mrp * qty;
+        total15 += product.d15 * qty;
         total25 += product.d25 * qty;
         total35 += product.d35 * qty;
         total42 += product.d42 * qty;
@@ -154,6 +156,7 @@ function calculateTotals() {
 
     // Calculate delivery charge
     const deliveryCharge = totalVP < 100 ? 105 : 0;
+
 
     // Update DOM elements
     document.getElementById('totalQty').textContent = totalQty.toLocaleString();
@@ -166,6 +169,9 @@ function calculateTotals() {
     document.getElementById('mrpWithout').textContent = `Without delivery: ₹${totalMRP.toLocaleString()}`;
     
     // Update discount totals
+    document.getElementById('total15').textContent = `₹${(total15 + deliveryCharge).toLocaleString()}`;
+    document.getElementById('d15Without').textContent = `Without delivery: ₹${total15.toLocaleString()}`;
+
     document.getElementById('total25').textContent = `₹${(total25 + deliveryCharge).toLocaleString()}`;
     document.getElementById('d25Without').textContent = `Without delivery: ₹${total25.toLocaleString()}`;
     
@@ -187,3 +193,13 @@ function init() {
 
 // Start the application when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
+
+function scrollToSummary() {
+    const summarySection = document.querySelector('.summary');
+    if (summarySection) {
+        summarySection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}

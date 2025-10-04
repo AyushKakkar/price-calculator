@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🛒 Product Price Calculator</h1>
+            <h1>🛒 Herbalife Product Price Calculator</h1>
             <p>Enter quantities to calculate totals with different discount levels</p>
             <br>
             <p style="text-align: left">By Ayush Kakkar</p>
@@ -43,6 +43,11 @@
                     <div class="card-value" id="totalMRP">₹0</div>
                     <div class="card-note" id="mrpWithout">Without delivery: ₹0</div>
                 </div>
+                <div class="summary-card card-9">
+                    <div class="card-label">Total @ 15% Discount</div>
+                    <div class="card-value" id="total15">₹0</div>
+                    <div class="card-note" id="d15Without">Without delivery: ₹0</div>
+                </div>
                 <div class="summary-card card-5">
                     <div class="card-label">Total @ 25% Discount</div>
                     <div class="card-value" id="total25">₹0</div>
@@ -68,9 +73,19 @@
     </div>
 
     <footer>
-        <p style="text-align: center; padding: 10px; font-size: 18px; color: #1B3C53;">Created by Ayush Kakkar</p>        
+
+        <p style="text-align: center; padding: 10px; font-size: 18px; color: #1B3C53;">Created by Ayush Kakkar</p>    
+        <p style="text-align: center; padding: 10px; font-size: 14px; color: #555;">&copy; 2025 Ayush Kakkar. All rights reserved.</p>
+        <p style="text-align: center; padding: 10px; font-size: 14px; color: #555;">This is a personal project for educational purpose and is not affiliated with any company.</p>    
     </footer>
 
     <script src="app.js"></script>
+
+    <div class="floating-summary-btn">
+        <button class="btn btn--primary floating-btn" onclick="scrollToSummary()">
+            📊 Summary
+        </button>
+    </div>
+
 </body>
 </html>

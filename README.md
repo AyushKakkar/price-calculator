@@ -1,3 +1,5 @@
+<img width="1888" height="891" alt="image" src="https://github.com/user-attachments/assets/dbc9324e-f174-456e-9f34-a68268fd6f3c" />
+
 # Price Calculator Web App
 
 ## Overview

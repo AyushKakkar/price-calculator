@@ -29,7 +29,7 @@ This project focuses on real-world usability and logical computation in the brow
 - JavaScript logic building
 - Real-time data handling
 - Practical problem-solving
-- UI clarity and responsiveness
+- UI/UX clarity and responsiveness
 
 ---
 

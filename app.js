@@ -1,43 +1,44 @@
 // Product data
 const products = [
-    { id: 1, name: "FORMULA 1 SHAKES MIX-400g", volPoint: 21.75, mrp: 2179, d15: 1893, d25: 1702, d35: 1511, d42: 1377, d50: 1225 },
-    { id: 2, name: "FORMULA 1 SHAKES MIX 750g", volPoint: 32.65, mrp: 3227, d15: 2803, d25: 2521, d35: 2238, d42: 2041, d50: 1815 },
-    { id: 3, name: "PERSONALIZED PROTEIN POWDER 200g", volPoint: 11.5, mrp: 1295, d15: 1125, d25: 1011, d35: 898, d42: 819, d50: 728 },
-    { id: 4, name: "PERSONALIZED PROTEIN POWDER 400g", volPoint: 22.5, mrp: 2485, d15: 2158, d25: 1941, d35: 1724, d42: 1571, d50: 1398 },
-    { id: 5, name: "SHAKEMATE", volPoint: 6.45, mrp: 653, d15: 604, d25: 572, d35: 540, d42: 517, d50: 491 },
-    { id: 6, name: "Male Factor+", volPoint: 34.75, mrp: 3410, d15: 2962, d25: 2664, d35: 2365, d42: 2156, d50: 1918 },
-    { id: 7, name: "WOMEN CHOICE", volPoint: 12.45, mrp: 1245, d15: 1081, d25: 972, d35: 863, d42: 787, d50: 700 },
-    { id: 8, name: "VRITILIFE BRAIN HEALTH", volPoint: 15.1, mrp: 1464, d15: 1272, d25: 1143, d35: 1015, d42: 926, d50: 823 },
-    { id: 9, name: "VRITILIFE IMMUNE HEALTH", volPoint: 15.8, mrp: 1528, d15: 1327, d25: 1193, d35: 1060, d42: 966, d50: 859 },
-    { id: 10, name: "VRITILIFE TRIPHALA", volPoint: 11.25, mrp: 1089, d15: 946, d25: 851, d35: 755, d42: 688, d50: 612 },
-    { id: 11, name: "VRITILIFE Facial Cleanser", volPoint: 10.4, mrp: 1165, d15: 1012, d25: 910, d35: 808, d42: 736, d50: 655 },
-    { id: 12, name: "VRITILIFE Facial Toner", volPoint: 11.8, mrp: 1322, d15: 1148, d25: 1033, d35: 917, d42: 836, d50: 743 },
-    { id: 13, name: "VRITILIFE Facial Serum", volPoint: 27.05, mrp: 3022, d15: 2625, d25: 2361, d35: 2096, d42: 1911, d50: 1700 },
-    { id: 14, name: "VRITILIFE Moisturizer", volPoint: 13.15, mrp: 1473, d15: 1279, d25: 1151, d35: 1022, d42: 931, d50: 828 },
-    { id: 15, name: "AFRESH", volPoint: 7.8, mrp: 812, d15: 705, d25: 634, d35: 563, d42: 513, d50: 456 },
-    { id: 16, name: "AFRESH TULSI", volPoint: 7.8, mrp: 812, d15: 712, d25: 646, d35: 580, d42: 534, d50: 481 },
-    { id: 17, name: "H24 HYDRATE", volPoint: 14.05, mrp: 1636, d15: 1457, d25: 1338, d35: 1219, d42: 1136, d50: 1041 },
-    { id: 18, name: "H24 REBUILD STRENGTH", volPoint: 24.7, mrp: 2616, d15: 2295, d25: 2081, d35: 1868, d42: 1718, d50: 1547 },
-    { id: 19, name: "HN SKIN BOOSTER 10gm x 30 Sachets", volPoint: 38.65, mrp: 3910, d15: 3476, d25: 3188, d35: 2899, d42: 2697, d50: 2466 },
-    { id: 20, name: "HN SKIN BOOSTER Canister", volPoint: 36.65, mrp: 3910, d15: 3460, d25: 3161, d35: 2862, d42: 2653, d50: 2413 },
-    { id: 21, name: "DINO SHAKE", volPoint: 9.6, mrp: 1115, d15: 968, d25: 870, d35: 773, d42: 704, d50: 626 },
-    { id: 22, name: "ACTIVATED FIBER TABLETS", volPoint: 15.75, mrp: 1636, d15: 1421, d25: 1278, d35: 1135, d42: 1034, d50: 920 },
-    { id: 23, name: "ACTIVATE FIBER COMPLEX", volPoint: 22.95, mrp: 2559, d15: 2223, d25: 1999, d35: 1775, d42: 1618, d50: 1439 },
-    { id: 24, name: "ALOE PLUS", volPoint: 9.4, mrp: 1059, d15: 919, d25: 827, d35: 734, d42: 669, d50: 595 },
-    { id: 25, name: "ALOE CONCENTRATE", volPoint: 24.95, mrp: 2696, d15: 2342, d25: 2106, d35: 1870, d42: 1705, d50: 1516 },
-    { id: 26, name: "SIMPLY PROBIOTIC", volPoint: 21.95, mrp: 2209, d15: 1918, d25: 1725, d35: 1532, d42: 1396, d50: 1242 },
-    { id: 27, name: "HERBALIFE CALCIUM TABLETS", volPoint: 10.25, mrp: 1203, d15: 1044, d25: 939, d35: 834, d42: 760, d50: 676 },
-    { id: 28, name: "JOINT SUPPORT", volPoint: 20.9, mrp: 2455, d15: 2132, d25: 1918, d35: 1703, d42: 1552, d50: 1380 },
-    { id: 29, name: "HERBALIFE NITEWORKS", volPoint: 75, mrp: 7128, d15: 6192, d25: 5568, d35: 4944, d42: 4508, d50: 4009 },
-    { id: 30, name: "HERBALIFELINE", volPoint: 25.75, mrp: 2667, d15: 2317, d25: 2083, d35: 1850, d42: 1687, d50: 1500 },
-    { id: 31, name: "BETA HEART-VANILLA FLAVOUR", volPoint: 19.55, mrp: 2242, d15: 1994, d25: 1828, d35: 1663, d42: 1547, d50: 1414 },
-    { id: 32, name: "MULIVITAMIN", volPoint: 19.95, mrp: 2004, d15: 1740, d25: 1565, d35: 1390, d42: 1267, d50: 1127 },
-    { id: 33, name: "CELL ACTIVATOR", volPoint: 21.95, mrp: 2215, d15: 1924, d25: 1730, d35: 1536, d42: 1400, d50: 1245 },
-    { id: 34, name: "CELL-U-LOSS", volPoint: 15.75, mrp: 1705, d15: 1481, d25: 1331, d35: 1182, d42: 1078, d50: 959 },
-    { id: 35, name: "HERBAL CONTROL", volPoint: 32.95, mrp: 3433, d15: 2982, d25: 2681, d35: 2381, d42: 2171, d50: 1930 },
-    { id: 36, name: "OCULAR DEFENSE", volPoint: 19.25, mrp: 1927, d15: 1674, d25: 1505, d35: 1336, d42: 1218, d50: 1083 },
-    { id: 37, name: "SLEEP ENHANCE", volPoint: 16.3, mrp: 1697, d15: 1474, d25: 1326, d35: 1177, d42: 1073, d50: 954 },
-     { id: 38, name: "LIFTOFF", volPoint: 38.05, mrp: 4119, d15: 3578, d25: 3219, d35: 2857, d42: 2604, d50: 2306 }
+    { id: 1, name: "FORMULA 1 SHAKES MIX-500g", volPoint: 21.75, mrp: 2179, d25: 1713, d35: 1526, d42: 1396, d50: 1246 },
+    { id: 2, name: "FORMULA 1 SHAKES MIX 750g", volPoint: 32.65, mrp: 3227, d25: 2537, d35: 2261, d42: 2068, d50: 1847 },
+    { id: 3, name: "PERSONALIZED PROTEIN POWDER 200g", volPoint: 11.5, mrp: 1295, d25: 1018, d35: 907, d42: 830, d50: 741 },
+    { id: 4, name: "PERSONALIZED PROTEIN POWDER 400g", volPoint: 22.5, mrp: 2485, d25: 1953, d35: 1741, d42: 1592, d50: 1422 },
+    { id: 5, name: "SHAKEMATE", volPoint: 6.45, mrp: 653, d25: 572, d35: 540, d42: 517, d50: 491 },
+    { id: 6, name: "Male Factor+", volPoint: 34.75, mrp: 3410, d25: 2681, d35: 2389, d42: 2185, d50: 1952 },
+    { id: 7, name: "WOMEN CHOICE", volPoint: 12.45, mrp: 1245, d25: 978, d35: 872, d42: 798, d50: 712 },
+    { id: 8, name: "VRITILIFE BRAIN HEALTH", volPoint: 15.1, mrp: 1464, d25: 1151, d35: 1026, d42: 938, d50: 838 },
+    { id: 9, name: "VRITILIFE IMMUNE HEALTH", volPoint: 15.8, mrp: 1528, d25: 1201, d35: 1070, d42: 979, d50: 874 },
+    { id: 10, name: "VRITILIFE TRIPHALA", volPoint: 11.25, mrp: 1089, d25: 856, d35: 763, d42: 698, d50: 623 },
+    { id: 11, name: "VRITILIFE Facial Cleanser", volPoint: 10.4, mrp: 1165, d25: 916, d35: 816, d42: 746, d50: 667 },
+    { id: 12, name: "VRITILIFE Facial Toner", volPoint: 11.8, mrp: 1322, d25: 1039, d35: 926, d42: 847, d50: 756 },
+    { id: 13, name: "VRITILIFE Facial Serum", volPoint: 27.05, mrp: 3022, d25: 2376, d35: 2118, d42: 1937, d50: 1730 },
+    { id: 14, name: "VRITILIFE Moisturizer", volPoint: 13.15, mrp: 1473, d25: 1158, d35: 1032, d42: 944, d50: 843 },
+    { id: 15, name: "AFRESH", volPoint: 7.8, mrp: 812, d25: 638, d35: 568, d42: 520, d50: 464 },
+    { id: 16, name: "AFRESH TULSI", volPoint: 7.8, mrp: 812, d25: 646, d35: 580, d42: 534, d50: 481 },
+    { id: 17, name: "H24 HYDRATE", volPoint: 14.05, mrp: 1636, d25: 1338, d35: 1219, d42: 1136, d50: 1041 },
+    { id: 18, name: "H24 REBUILD STRENGTH", volPoint: 24.7, mrp: 2616, d25: 2081, d35: 1868, d42: 1718, d50: 1547 },
+    { id: 19, name: "HN SKIN BOOSTER 10gm x 30 Sachets", volPoint: 38.65, mrp: 3910, d25: 3188, d35: 2899, d42: 2697, d50: 2466 },
+    { id: 20, name: "HN SKIN BOOSTER Canister", volPoint: 38.65, mrp: 3910, d25: 3161, d35: 2862, d42: 2653, d50: 2413 },
+    { id: 21, name: "DINO SHAKE", volPoint: 9.6, mrp: 1115, d25: 876, d35: 780, d42: 714, d50: 637 },
+    { id: 22, name: "ACTIVATED FIBER TABLETS", volPoint: 15.75, mrp: 1636, d25: 1286, d35: 1146, d42: 1048, d50: 936 },
+    { id: 23, name: "ACTIVATE FIBER COMPLEX", volPoint: 22.95, mrp: 2559, d25: 2012, d35: 1793, d42: 1640, d50: 1465 },
+    { id: 24, name: "ALOE PLUS", volPoint: 9.4, mrp: 1059, d25: 832, d35: 741, d42: 678, d50: 605 },
+    { id: 25, name: "ALOE CONCENTRATE", volPoint: 24.95, mrp: 2696, d25: 2119, d35: 1889, d42: 1727, d50: 1543 },
+    { id: 26, name: "SIMPLY PROBIOTIC", volPoint: 21.95, mrp: 2209, d25: 1736, d35: 1547, d42: 1415, d50: 1264 },
+    { id: 27, name: "HERBALIFE CALCIUM TABLETS", volPoint: 10.25, mrp: 1203, d25: 945, d35: 842, d42: 771, d50: 688 },
+    { id: 28, name: "JOINT SUPPORT", volPoint: 20.9, mrp: 2455, d25: 1930, d35: 1720, d42: 1573, d50: 1405 },
+    { id: 29, name: "HERBALIFE NITEWORKS", volPoint: 75, mrp: 7128, d25: 5604, d35: 4994, d42: 4568, d50: 4080 },
+    { id: 30, name: "HERBALIFELINE", volPoint: 25.75, mrp: 2667, d25: 2097, d35: 1869, d42: 1709, d50: 1527 },
+    { id: 31, name: "BETA HEART-VANILLA FLAVOUR", volPoint: 19.55, mrp: 2242, d25: 1828, d35: 1663, d42: 1547, d50: 1414 },
+    { id: 32, name: "MULIVITAMIN", volPoint: 19.95, mrp: 2004, d25: 1575, d35: 1404, d42: 1284, d50: 1147 },
+    { id: 33, name: "CELL ACTIVATOR", volPoint: 21.95, mrp: 2215, d25: 1741, d35: 1551, d42: 1419, d50: 1267 },
+    { id: 34, name: "CELL-U-LOSS", volPoint: 15.75, mrp: 1705, d25: 1340, d35: 1194, d42: 1092, d50: 975 },
+    { id: 35, name: "HERBAL CONTROL", volPoint: 32.95, mrp: 3433, d25: 2699, d35: 2405, d42: 2199, d50: 1965 },
+    { id: 36, name: "OCULAR DEFENSE", volPoint: 19.25, mrp: 1927, d25: 1515, d35: 1350, d42: 1234, d50: 1103 },
+    { id: 37, name: "SLEEP ENHANCE", volPoint: 16.3, mrp: 1697, d25: 1334, d35: 1189, d42: 1087, d50: 971 },
+    { id: 38, name: "LIFTOFF WATERMELON (30 SACHETS)", volPoint: 38.05, mrp: 4119, d25: 3238, d35: 2886, d42: 2639, d50: 2357 },
+    { id: 39, name: "LIFTOFF WATERMELON (10 SACHETS)", volPoint: 12.95, mrp: 1401, d25: 1101, d35: 982, d42: 898, d50: 802 }
 ];
 // Initialize quantities object
 const quantities = {};
@@ -134,7 +135,6 @@ function animateQuantityChange(id) {
 function calculateTotals() {
     let totalVP = 0;
     let totalMRP = 0;
-    var total15 = 0; 
     let total25 = 0;
     let total35 = 0;
     let total42 = 0;
@@ -147,7 +147,6 @@ function calculateTotals() {
         totalQty += qty;
         totalVP += product.volPoint * qty;
         totalMRP += product.mrp * qty;
-        total15 += product.d15 * qty;
         total25 += product.d25 * qty;
         total35 += product.d35 * qty;
         total42 += product.d42 * qty;
@@ -169,9 +168,6 @@ function calculateTotals() {
     document.getElementById('mrpWithout').textContent = `Without delivery: ₹${totalMRP.toLocaleString()}`;
     
     // Update discount totals
-    document.getElementById('total15').textContent = `₹${(total15 + deliveryCharge).toLocaleString()}`;
-    document.getElementById('d15Without').textContent = `Without delivery: ₹${total15.toLocaleString()}`;
-
     document.getElementById('total25').textContent = `₹${(total25 + deliveryCharge).toLocaleString()}`;
     document.getElementById('d25Without').textContent = `Without delivery: ₹${total25.toLocaleString()}`;
     
